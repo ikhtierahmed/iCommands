@@ -1,4 +1,4 @@
-# 🛠️ iCommands v2.9
+# 🛠️ iCommands v2.7
 **The Ultimate All-in-one Windows Management & Optimization Utility**
 
 <p align="center">
