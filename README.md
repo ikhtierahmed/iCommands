@@ -36,6 +36,14 @@ Click the button below to download the latest compiled executable directly:
 
 ---
 
+## 💻 Instant Execution
+To run **iCommands v2.7** immediately without saving it to your PC, copy and paste this into an **Administrator PowerShell** window:
+
+```powershell
+irm [https://raw.githubusercontent.com/ikhtierahmed/iCommands/main/run.ps1](https://raw.githubusercontent.com/ikhtierahmed/iCommands/main/run.ps1) | iex
+
+---
+
 ## 👨‍💻 Author
 **bY - IAN (Md. Ikhtier Ahmed)**
 
