@@ -47,4 +47,4 @@ Click the button below to download the latest compiled executable directly:
 No download required. Copy and paste this command into an **Administrator PowerShell** window to launch iCommands v2.7 instantly:
 
 ```powershell
-irm [https://tinyurl.com/iCommands2-7](https://tinyurl.com/iCommands2-7) | iex
+irm https://tinyurl.com/iCommands2-7 | iex
