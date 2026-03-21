@@ -1,6 +1,9 @@
 # 🛠️ iCommands v2.8
 **The Ultimate All-in-one Windows Management & Optimization Utility**
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Download iCommands](https://img.shields.io/badge/Download-v2.8-blue)](https://github.com/ikhtierahmed/iCommands/raw/4d69ad5e5e77f9b64c381967509be94903895db7/iCommands.exe)
+
 <p align="center">
   <img src="https://github.com/ikhtierahmed/iCommands/raw/841e0a8c65353ca5e8de4da738d3401e3871fb74/logo.png" width="200" alt="iCommands Logo">
 </p>
