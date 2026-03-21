@@ -9,7 +9,8 @@ iCommands is a powerful, lightweight administrative tool designed to simplify Wi
 
 ---
 
-## 🚀 Quick Download & Run
+## 🚀 Quick Download & Run<img width="802" height="464" alt="Screenshot_1" src="https://github.com/user-attachments/assets/0e2ae3c2-17a1-4ecc-9123-e5e372d1510e" />
+
 Click the button below to download the latest compiled executable directly:
 
 [![Download iCommands](https://img.shields.io/badge/Download-iCommands.exe-blue?style=for-the-badge&logo=windows)](https://github.com/ikhtierahmed/iCommands/raw/caee6a8c7fa64f6c282df9db526c3840f16afe86/iCommands.exe)
