@@ -37,7 +37,7 @@ iCommands is built with transparency in mind. The executable is regularly scanne
 [![VirusTotal Scan](https://img.shields.io/badge/VirusTotal-0%2F95_Clean-brightgreen?style=for-the-badge&logo=virustotal)](https://www.virustotal.com/gui/home/url)
 
 <p align="center">
-  <img src="[https://github.com/ikhtierahmed/iCommands/raw/main/image_a6feeb.png](https://github.com/user-attachments/assets/8badbd67-0f82-4ef3-87ff-549e1a73140c)" alt="VirusTotal Security Report" width="800">
+  <img src="https://github.com/user-attachments/assets/8badbd67-0f82-4ef3-87ff-549e1a73140c" alt="VirusTotal Security Report" width="800">
 </p>
 
 
