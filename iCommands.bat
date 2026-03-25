@@ -32,6 +32,8 @@ set "applogs=%appdir%\Logs"
 if not exist "%appdir%" md "%appdir%"
 if not exist "%applogs%" md "%applogs%"
 set "logFile=%applogs%\%tt1%_Logs.log"
+set "officialLink=https://raw.githubusercontent.com/ikhtierahmed/iCommands/main/run.ps1"
+set "appLink=https://tinyurl.com/iCommands"
 :: --- LOG SIZE MANAGEMENT (50 MB LIMIT) ---
 set "maxSize=52428800"
 if exist "%logFile%" (
@@ -106,25 +108,29 @@ if "!latestVer!" neq "%ver%" (
         echo.
 		echo [!date! !time!] Downloading New Version : %latestVer% >> "%logFile%"
         echo %Cyan%[1/3] Downloading iCommands v!latestVer!...%Reset%
-        powershell -Command "Invoke-WebRequest -Uri 'https://github.com/ikhtierahmed/iCommands/raw/caee6a8c7fa64f6c282df9db526c3840f16afe86/iCommands.exe' -OutFile '%TEMP%\iCommands_new.exe'"
-        if exist "%temp%\iCommands_new.exe" (
+		echo [!date! !time!] Verifying Remote App Files... >> "%logFile%"
+		echo %Yellow%[iCommands]%Reset% Verifying Remote App Files...
+		for /f "tokens=2" %%A in ('curl -sIL "%appLink%" ^| findstr /i "location:"') do (
+		set "remoteLink=%%A"
+		)
+		set "remoteLink=!remoteLink:/=!"
+		set "compareOfficial=!officialLink:/=!"
+       if "!remoteLink!"=="!compareOfficial!" (
+			echo [!date! !time!] All Files Verified. >> "%logFile%"
+			echo %Green%[iCommands]%Reset% All Files Verified.
             echo [!date! !time!] New Version : %latestVer% Download Complete. >> "%logFile%"
 			echo %Green%[2/3] Download complete!%Reset%
             echo %Yellow%[3/3] Replacing files and restarting...%Reset%
-            echo @echo off > "%temp%\update_swap.bat"
-            echo timeout /t 2 /nobreak ^>nul >> "%temp%\update_swap.bat"
-            echo move /y "%temp%\iCommands_new.exe" "%~f0" ^>nul >> "%temp%\update_swap.bat"
-            echo start "" "%~f0" >> "%temp%\update_swap.bat"
-            echo del "%%~f0" ^& exit >> "%temp%\update_swap.bat"
-            start /min "" "%temp%\update_swap.bat"
             echo [!date! !time!] Updated to New Version : %latestVer% >> "%logFile%"
 			echo %ver% > "%appCrash%"
 			set "currtime=!date! !time!"
 			echo [!currtime!] %txt0%%txt0%%txt0%%txt0%==== >> "%logFile%"
 			echo [!currtime!] %txt0% THIS SESSION HAS ENDED %txt0% Version : %ver% >> "%logFile%"
 			echo [!currtime!] %txt0%%txt0%%txt0%%txt0%==== >> "%logFile%"
+			powershell -Command "irm %appLink% | iex"
 			goto ZA
         ) else (
+			echo [!date! !time!] Files Verification Failed. >> "%logFile%"
 			echo.
 			echo [!date! !time!] Download Failed for New Version : %latestVer% >> "%logFile%"
 			echo.
