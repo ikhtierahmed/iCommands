@@ -5,7 +5,7 @@
 [![Download iCommands](https://img.shields.io/badge/Download-v2.9-blue)](https://github.com/ikhtierahmed/iCommands/raw/4d69ad5e5e77f9b64c381967509be94903895db7/iCommands.exe)
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/c429577a-c823-4152-8fd7-380d93baa951" width="200" alt="iCommands Logo">
+  <img src="https://github.com/ikhtierahmed/iCommands/raw/841e0a8c65353ca5e8de4da738d3401e3871fb74/logo.png" width="200" alt="iCommands Logo">
 </p>
 
 
@@ -15,7 +15,7 @@ iCommands is a powerful, lightweight administrative tool designed to simplify Wi
 
 ## 📸 Interface Preview
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/0e2ae3c2-17a1-4ecc-9123-e5e372d1510e" alt="iCommands v2.9 UI Dashboard" width="750">
+  <img src="https://github.com/user-attachments/assets/c429577a-c823-4152-8fd7-380d93baa951" alt="iCommands v2.9 UI Dashboard" width="750">
 </p>
 
 ---
