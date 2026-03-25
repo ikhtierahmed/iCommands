@@ -1,8 +1,8 @@
-# 🛠️ iCommands v2.8
+# 🛠️ iCommands v2.9
 **The Ultimate All-in-one Windows Management & Optimization Utility**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Download iCommands](https://img.shields.io/badge/Download-v2.8-blue)](https://github.com/ikhtierahmed/iCommands/raw/4d69ad5e5e77f9b64c381967509be94903895db7/iCommands.exe)
+[![Download iCommands](https://img.shields.io/badge/Download-v2.9-blue)](https://github.com/ikhtierahmed/iCommands/raw/4d69ad5e5e77f9b64c381967509be94903895db7/iCommands.exe)
 
 <p align="center">
   <img src="https://github.com/ikhtierahmed/iCommands/raw/841e0a8c65353ca5e8de4da738d3401e3871fb74/logo.png" width="200" alt="iCommands Logo">
@@ -14,7 +14,7 @@ iCommands is a powerful, lightweight administrative tool designed to simplify Wi
 
 ## 📸 Interface Preview
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/0e2ae3c2-17a1-4ecc-9123-e5e372d1510e" alt="iCommands v2.8 UI Dashboard" width="750">
+  <img src="https://github.com/user-attachments/assets/0e2ae3c2-17a1-4ecc-9123-e5e372d1510e" alt="iCommands v2.9 UI Dashboard" width="750">
 </p>
 
 ---
@@ -28,7 +28,7 @@ Click the button below to download the latest compiled executable directly:
 
 ---
 
-## ✨ Key Features (v2.8)
+## ✨ Key Features (v2.9)
 
 - **🛡️ Smart Categorized UI:** Tools are now organized into **{Third-party}**, **{Windows}**, and **{System}** zones for safer navigation.
 - **📊 Live Activity Logging:** Full audit trail with real-time log size display on the dashboard and an instant **[L]** view shortcut.
@@ -54,7 +54,7 @@ Click the button below to download the latest compiled executable directly:
 ---
 
 ## ⚡ Instant Execution (PowerShell)
-No download required. Copy and paste this command into an **Administrator PowerShell** window to launch iCommands v2.8 instantly:
+No download required. Copy and paste this command into an **Administrator PowerShell** window to launch iCommands v2.9 instantly:
 
 ```powershell
 irm https://tinyurl.com/iCommands | iex
