@@ -29,6 +29,20 @@ Click the button below to download the latest compiled executable directly:
 
 ---
 
+## 🛡️ Security & Trust
+iCommands is built with transparency in mind. The executable is regularly scanned to ensure it is free from malware and false positives.
+
+**Latest Scan Result:** 🟢 **0/95 Clean**
+
+[![VirusTotal Scan](https://img.shields.io/badge/VirusTotal-0%2F95_Clean-brightgreen?style=for-the-badge&logo=virustotal)](https://www.virustotal.com/gui/home/url)
+
+<p align="center">
+  <img src="[https://github.com/ikhtierahmed/iCommands/raw/main/image_a6feeb.png](https://github.com/user-attachments/assets/8badbd67-0f82-4ef3-87ff-549e1a73140c)" alt="VirusTotal Security Report" width="800">
+</p>
+
+
+---
+
 ## ✨ Key Features (v2.9)
 
 - **🛡️ Smart Categorized UI:** Tools are now organized into **{Third-party}**, **{Windows}**, and **{System}** zones for safer navigation.
