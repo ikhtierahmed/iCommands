@@ -10,8 +10,9 @@ set "Blue=%ESC%[94m"
 set "Green=%ESC%[92m"
 set "Cyan=%ESC%[96m"
 set "Reset=%ESC%[0m"
+mode con: cols=100 lines=40
 :: --- 3. APP IDENTITY ---
-set "ver=2.8"
+set "ver=2.9"
 set "tt1=iCommands"
 set "com=i444266"
 set "txt0==========="
@@ -80,7 +81,7 @@ for /f "usebackq tokens=*" %%v in (`powershell -NoProfile -Command "(Invoke-WebR
 if "!latestVer!" neq "%ver%" (
 	echo [!date! !time!] NEW UPDATE AVAILABLE : v%latestVer% >> "%logFile%"
     echo.
-	echo  %Cyan%                                  bY - IAN%Reset%
+	echo  %Cyan%                            bY - MR. 4HM3D%Reset%
     echo  %Yellow%%txt5%%txt5%%txt5%%txt5%**%Reset%
     echo  %Green%  NEW UPDATE AVAILABLE: v!latestVer!%Reset%
     echo  %Yellow%%txt5%%txt5%%txt5%%txt5%**%Reset%
@@ -117,6 +118,11 @@ if "!latestVer!" neq "%ver%" (
             echo del "%%~f0" ^& exit >> "%temp%\update_swap.bat"
             start /min "" "%temp%\update_swap.bat"
             echo [!date! !time!] Updated to New Version : %latestVer% >> "%logFile%"
+			echo %ver% > "%appCrash%"
+			set "currtime=!date! !time!"
+			echo [!currtime!] %txt0%%txt0%%txt0%%txt0%==== >> "%logFile%"
+			echo [!currtime!] %txt0% THIS SESSION HAS ENDED %txt0% Version : %ver% >> "%logFile%"
+			echo [!currtime!] %txt0%%txt0%%txt0%%txt0%==== >> "%logFile%"
 			goto ZA
         ) else (
 			echo.
@@ -147,7 +153,7 @@ if %errorLevel% neq 0 (
     color 0c
     echo [!date! !time!] Current User Type : NORMAL. >> "%logFile%"
 	echo.
-    echo  %Cyan%                                            bY - IAN%Reset%
+    echo  %Cyan%                                      bY - MR. 4HM3D%Reset%
     echo  %txt5%%txt5%%txt5%%txt5%%txt5%**%appCrashS%
     echo  %Red%ERROR: This script must be run as Administrator!%Reset%
     echo  %txt5%%txt5%%txt5%%txt5%%txt5%**%vers%
@@ -173,7 +179,7 @@ if exist "%logFile%" (
 cls
 title %tt1%, v%ver%
 echo.
-echo  %Cyan%                                 bY - IAN%Reset%
+echo  %Cyan%                           bY - MR. 4HM3D%Reset%
 echo  %txt0%%txt0%%txt0%%txt0%=%appCrashS%
 echo      %tt% - v%ver%     
 echo  %txt0%%txt0%%txt0%%txt0%=%vers%
@@ -226,7 +232,7 @@ goto A
 echo [!date! !time!] %txt4%{L} View Activity Logs. >> "%logFile%"
 cls
 echo.
-echo  %Cyan%                                 bY - IAN%Reset%
+echo  %Cyan%                           bY - MR. 4HM3D%Reset%
 echo  %txt0%%txt0%%txt0%%txt0%=
 echo           %tt1% ACTIVITY LOGS           
 echo  %txt0%%txt0%%txt0%%txt0%=%vers%
@@ -253,7 +259,7 @@ goto A
 echo [!date! !time!] %txt4%{P} Power/Hibernation Status. >> "%logFile%"
 cls
 echo.
-echo  %Cyan%                                 bY - IAN%Reset%
+echo  %Cyan%                           bY - MR. 4HM3D%Reset%
 echo  %txt0%%txt0%%txt0%%txt0%=
 echo           PC HIBERNATION CONTROL          
 echo  %txt0%%txt0%%txt0%%txt0%=%vers%
@@ -303,7 +309,7 @@ goto AP_Power
 echo [!date! !time!] %txt4%{B} Restart to BIOS/UEFI. >> "%logFile%"
 cls
 echo.
-echo  %Cyan%                                 bY - IAN%Reset%
+echo  %Cyan%                           bY - MR. 4HM3D%Reset%
 echo  %txt0%%txt0%%txt0%%txt0%=
 echo            Restart to BIOS/UEFI       
 echo  %txt0%%txt0%%txt0%%txt0%=%vers%
@@ -327,13 +333,18 @@ echo [!date! !time!] %txt4%{B}{Y} Restart Now. >> "%logFile%"
 shutdown /r /fw /t 2
 echo [!date! !time!] BIOS Settings will Open Automatically on Restart. >> "%logFile%"
 echo [!date! !time!] %txt3% Restart to BIOS/UEFI Menu. >> "%logFile%"
+echo %ver% > "%appCrash%"
+set "currtime=!date! !time!"
+echo [!currtime!] %txt0%%txt0%%txt0%%txt0%==== >> "%logFile%"
+echo [!currtime!] %txt0% THIS SESSION HAS ENDED %txt0% Version : %ver% >> "%logFile%"
+echo [!currtime!] %txt0%%txt0%%txt0%%txt0%==== >> "%logFile%"
 goto ZA
 :: --- DISK OPTIMIZE ---
 :AO_Defrag
 echo [!date! !time!] %txt4%{O} Disk Optimize (Defrag/Trim^). >> "%logFile%"
 cls
 echo.
-echo  %Cyan%                                 bY - IAN%Reset%
+echo  %Cyan%                           bY - MR. 4HM3D%Reset%
 echo  %txt0%%txt0%%txt0%%txt0%=
 echo         DISK OPTIMIZE (DEFRAG/TRIM)       
 echo  %txt0%%txt0%%txt0%%txt0%=%vers%
@@ -354,7 +365,7 @@ goto A
 :AN_NetMenu
 cls
 echo.
-echo  %Cyan%                                 bY - IAN%Reset%
+echo  %Cyan%                           bY - MR. 4HM3D%Reset%
 echo  %txt0%%txt0%%txt0%%txt0%=
 echo                NETWORK TOOLS              
 echo  %txt0%%txt0%%txt0%%txt0%=%vers%
@@ -395,7 +406,7 @@ echo [!date! !time!] %txt4%{T} Tree Utility (Directory Map^). >> "%logFile%"
 cd /d %SystemRoot%\System32
 cls
 echo.
-echo  %Cyan%                                 bY - IAN%Reset%
+echo  %Cyan%                           bY - MR. 4HM3D%Reset%
 echo  %txt0%%txt0%%txt0%%txt0%=
 echo              TREE UTILITY TOOL            
 echo  %txt0%%txt0%%txt0%%txt0%=%vers%
@@ -461,7 +472,7 @@ goto A
 echo [!date! !time!] %txt4%{W} WinGet Package Manager. >> "%logFile%"
 cls
 echo.
-echo  %Cyan%                                 bY - IAN%Reset%
+echo  %Cyan%                           bY - MR. 4HM3D%Reset%
 echo  %txt0%%txt0%%txt0%%txt0%=
 echo        WINGET PACKAGE MANAGER CHECK       
 echo  %txt0%%txt0%%txt0%%txt0%=%vers%
@@ -537,7 +548,7 @@ goto AW_Menu
 :AW_Menu
 cls
 echo.
-echo  %Cyan%                                 bY - IAN%Reset%
+echo  %Cyan%                           bY - MR. 4HM3D%Reset%
 echo  %txt0%%txt0%%txt0%%txt0%=
 echo            WINGET CONTROL CENTER          
 echo  %txt0%%txt0%%txt0%%txt0%=%vers%
@@ -569,7 +580,7 @@ goto AW_Menu
 :AW_Search
 cls
 echo.
-echo  %Cyan%                                 bY - IAN%Reset%
+echo  %Cyan%                           bY - MR. 4HM3D%Reset%
 echo  %txt0%%txt0%%txt0%%txt0%=
 echo       WINGET : SEARCH ^& QUICK INSTALL     
 echo  %txt0%%txt0%%txt0%%txt0%=%vers%
@@ -700,7 +711,7 @@ goto A
 :AC
 cls
 echo.
-echo  %Cyan%                                 bY - IAN%Reset%
+echo  %Cyan%                           bY - MR. 4HM3D%Reset%
 echo  %txt0%%txt0%%txt0%%txt0%=
 echo          SYSTEM PERFORMANCE RATING        
 echo  %txt0%%txt0%%txt0%%txt0%=%vers%
@@ -731,7 +742,7 @@ goto AC
 echo [!date! !time!] %txt4%{S}{R} Run NEW Assessment. >> "%logFile%"
 cls
 echo.
-echo  %Cyan%                                 bY - IAN%Reset%
+echo  %Cyan%                           bY - MR. 4HM3D%Reset%
 echo  %txt0%%txt0%%txt0%%txt0%=
 echo        CHECKING YOUR PCs PERFORMANCE      
 echo  %txt0%%txt0%%txt0%%txt0%=%vers%
@@ -750,7 +761,7 @@ goto AC_View
 :AC_View
 cls
 echo.
-echo  %Cyan%                                 bY - IAN%Reset%
+echo  %Cyan%                           bY - MR. 4HM3D%Reset%
 echo  %txt0%%txt0%%txt0%%txt0%=
 echo         YOUR PCs PERFORMANCE REPORT       
 echo  %txt0%%txt0%%txt0%%txt0%=%vers%
@@ -816,7 +827,7 @@ goto AC
 echo [!date! !time!] %txt4%{H} Drive Health Check (SSD/HDD^). >> "%logFile%"
 cls
 echo.
-echo  %Cyan%                                 bY - IAN%Reset%
+echo  %Cyan%                           bY - MR. 4HM3D%Reset%
 echo  %txt0%%txt0%%txt0%%txt0%=
 echo       DRIVE HEALTH REPORT (S.M.A.R.T)     
 echo  %txt0%%txt0%%txt0%%txt0%=%vers%
@@ -844,7 +855,7 @@ goto A
 echo [!date! !time!] %txt4%{C} Deep Cleanup. >> "%logFile%"
 cls
 echo.
-echo  %Cyan%                                 bY - IAN%Reset%
+echo  %Cyan%                           bY - MR. 4HM3D%Reset%
 echo  %txt0%%txt0%%txt0%%txt0%=
 echo                CLEANUP TOOL               
 echo  %txt0%%txt0%%txt0%%txt0%=%vers%
@@ -879,7 +890,7 @@ goto Z
 echo [!date! !time!] %txt4%{R} Repair System Files (SFC^). >> "%logFile%"
 cls
 echo.
-echo  %Cyan%                                 bY - IAN%Reset%
+echo  %Cyan%                           bY - MR. 4HM3D%Reset%
 echo  %txt0%%txt0%%txt0%%txt0%=
 echo             SYSTEM REPAIR (SFC)           
 echo  %txt0%%txt0%%txt0%%txt0%=%vers%
@@ -895,22 +906,30 @@ pause
 echo [!date! !time!] %txt2% %txt1%. >> "%logFile%"
 goto A
 :Z
+echo %ver% > "%appCrash%"
+set "currtime=!date! !time!"
+echo [!currtime!] %txt0%%txt0%%txt0%%txt0%==== >> "%logFile%"
+echo [!currtime!] %txt0% THIS SESSION HAS ENDED %txt0% Version : %ver% >> "%logFile%"
+echo [!currtime!] %txt0%%txt0%%txt0%%txt0%==== >> "%logFile%"
 cls
 echo.
-echo  %Cyan%                                 bY - IAN%Reset%
+echo  %Cyan%                           bY - MR. 4HM3D%Reset%
 echo  %txt0%%txt0%%txt0%%txt0%=
 echo      %tt% - v%ver%     
 echo  %txt0%%txt0%%txt0%%txt0%=%vers%
 echo.
 echo  Goodbye! Have a nice day.
 echo.
-timeout /t 2 >nul
+timeout /t 3 >nul
 goto ZA
 :ZA
-echo %ver% > "%appCrash%"
 powershell -Command "Remove-Item -Path $env:TEMP\* -Recurse -Force -ErrorAction SilentlyContinue"
-set "currtime=!date! !time!"
-echo [!currtime!] %txt0%%txt0%%txt0%%txt0%==== >> "%logFile%"
-echo [!currtime!] %txt0% THIS SESSION HAS ENDED %txt0% Version : %ver% >> "%logFile%"
-echo [!currtime!] %txt0%%txt0%%txt0%%txt0%==== >> "%logFile%"
 exit /b
+goto ZB
+:ZB
+cls
+echo.
+echo  If you are seeing this, then the app is not working properly.
+echo.
+pause
+goto ZA
